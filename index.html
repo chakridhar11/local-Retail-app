@@ -1018,7 +1018,7 @@
             receipt+='───────────────────────────────────\n';
             inv.items.forEach(i=>{
                 const amt=i.qty*i.price;
-                               const line=i.name.substring(0,14).padEnd(14)+i.qty.toString().padStart(4)+formatINR(i.price).padStart(8)+formatINR(amt).padStart(7);
+                               const line=i.name.substring(0,14).padEnd(14)+i.qty.toString().padStart(7)+formatINR(i.price).padStart(8)+formatINR(amt).padStart(7);
                 receipt+=line+'\n';
             });
             receipt+='───────────────────────────────────\n';
@@ -1604,4 +1604,5 @@
     </script>
 </body>
 </html>
+
 
