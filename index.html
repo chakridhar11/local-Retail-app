@@ -1014,7 +1014,7 @@
             receipt+='Date: '+new Date(inv.date).toLocaleString()+'\n';
             receipt+='Customer: '+inv.customer+'\n\n';
             receipt+='───────────────────────────────────\n';
-            receipt+='Item              Qty    Rate    Amt\n';
+            receipt+='Item           Qty       Rate      Amt\n';
             receipt+='───────────────────────────────────\n';
             inv.items.forEach(i=>{
                 const amt=i.qty*i.price;
@@ -1604,3 +1604,4 @@
     </script>
 </body>
 </html>
+
