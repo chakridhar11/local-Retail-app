@@ -1014,11 +1014,11 @@
             receipt+='Date: '+new Date(inv.date).toLocaleString()+'\n';
             receipt+='Customer: '+inv.customer+'\n\n';
             receipt+='───────────────────────────────────\n';
-            receipt+='Item           Qty       Rate      Amt\n';
+            receipt+='Item       Qty       Rate       Amt\n';
             receipt+='───────────────────────────────────\n';
             inv.items.forEach(i=>{
                 const amt=i.qty*i.price;
-                               const line=i.name.substring(0,14).padEnd(14)+i.qty.toString().padStart(7)+formatINR(i.price).padStart(8)+formatINR(amt).padStart(7);
+                               const line=i.name.substring(0,14).padEnd(14)+i.qty.toString().padStart(1)+formatINR(i.price).padStart(10)+formatINR(amt).padStart(10);
                 receipt+=line+'\n';
             });
             receipt+='───────────────────────────────────\n';
@@ -1604,5 +1604,6 @@
     </script>
 </body>
 </html>
+
 
 
